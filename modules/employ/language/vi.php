@@ -398,3 +398,6 @@ $lang_module['keywords'] = 'Từ khóa';
 
 $lang_module['job_status_1'] = 'Đang chờ việc';
 $lang_module['job_status_0'] = 'Không sẵn sàng';
+
+$lang_module['detail_not_available'] = 'Nội dung này hiện không khả dụng';
+$lang_module['redirect_to_module'] = 'Quay trở lại trang chính';

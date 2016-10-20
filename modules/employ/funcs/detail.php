@@ -23,8 +23,8 @@ $publtime = 0;
 $sql = $db->query('SELECT * FROM ' . NV_PREFIXLANG . '_' . $module_data . '_rows WHERE alias = ' . $db->quote($alias_url) . ' AND status=1');
 $data_content = $sql->fetch();
 if (empty($data_content)) {
-    $nv_redirect = NV_BASE_SITEURL . 'index.php?' . NV_LANG_VARIABLE . '=' . NV_LANG_DATA . '&amp;' . NV_NAME_VARIABLE . '=' . $module_name;
-    redict_link($lang_module['detail_do_not_view'], $lang_module['redirect_to_back_shops'], $nv_redirect);
+    $nv_redirect = nv_url_rewrite (NV_BASE_SITEURL . 'index.php?' . NV_LANG_VARIABLE . '=' . NV_LANG_DATA . '&amp;' . NV_NAME_VARIABLE . '=' . $module_name, true);
+    redirect_link($lang_module['detail_not_available'], $lang_module['redirect_to_module'], $nv_redirect);
 }
 $id = $data_content['id'];
 

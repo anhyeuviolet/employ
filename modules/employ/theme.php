@@ -237,3 +237,24 @@ function search_result_theme($key, $numRecord, $per_pages, $page, $array_content
     $xtpl->parse('results');
     return $xtpl->text('results');
 }
+/**
+ * redirect_link()
+ *
+ * @param mixed $lang_view
+ * @param mixed $lang_back
+ * @param mixed $nv_redirect
+ * @return
+ */
+function redirect_link($lang_view, $lang_back, $nv_redirect)
+{
+    $contents = "<div class=\"alert alert-warning center-block\" align=\"center\">";
+    $contents .= $lang_view . "<br /><br />\n";
+    $contents .= "<img border=\"0\" src=\"" . NV_BASE_SITEURL . NV_ASSETS_DIR . "/images/load_bar.gif\"><br /><br />\n";
+    $contents .= "<a href=\"" . $nv_redirect . "\">" . $lang_back . "</a>";
+    $contents .= "</div>";
+    $contents .= "<meta http-equiv=\"refresh\" content=\"4;url=" . $nv_redirect . "\" />";
+    include NV_ROOTDIR . '/includes/header.php';
+    echo nv_site_theme($contents);
+    include NV_ROOTDIR . '/includes/footer.php';
+    exit();
+}
