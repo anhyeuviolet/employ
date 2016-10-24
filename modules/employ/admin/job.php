@@ -114,8 +114,8 @@ if (! empty($savecat)) {
         $viewcat = 'viewcat_page_new';
         $subcatid = '';
         
-        $sql = "INSERT INTO " . NV_PREFIXLANG . "_" . $module_data . "_cat (parentid, title, titlesite, alias, description, descriptionhtml, viewdescription, weight, sort, lev, viewcat, inhome, numlinks, numsubcat, subcatid, add_time, edit_time, groups_view) VALUES
-			(:parentid, :title, :titlesite, :alias, :description, :descriptionhtml, '" . $viewdescription . "', :weight, '0', '0', :viewcat, '1', '3', '0', :subcatid, " . NV_CURRENTTIME . ", " . NV_CURRENTTIME . ", :groups_view)";
+        $sql = "INSERT INTO " . NV_PREFIXLANG . "_" . $module_data . "_cat (parentid, title, titlesite, alias, description, descriptionhtml, viewdescription, weight, sort, lev, viewcat, numlinks, numsubcat, subcatid, add_time, edit_time, groups_view) VALUES
+			(:parentid, :title, :titlesite, :alias, :description, :descriptionhtml, '" . $viewdescription . "', :weight, '0', '0', :viewcat, '3', '0', :subcatid, " . NV_CURRENTTIME . ", " . NV_CURRENTTIME . ", :groups_view)";
         
         $data_insert = array();
         $data_insert['parentid'] = $parentid;
