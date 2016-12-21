@@ -66,6 +66,7 @@ if (! empty($savecat)) {
             $error = $lang_module['errorsave'];
         }
     }
+	$nv_Cache->delMod($module_name);
 }
 
 $location_id = $nv_Request->get_int('location_id', 'get', 0);
