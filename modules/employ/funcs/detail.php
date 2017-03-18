@@ -14,7 +14,7 @@ if ( ! defined( 'NV_IS_MOD_EMPLOY' ) ) die( 'Stop!!!' );
 $page_title = $module_info['custom_title'];
 $key_words = $module_info['keywords'];
 
-$data_content = array();
+$data_content = $related_array = array();
 
 // Thiet lap quyen xem chi tiet
 $contents = '';
